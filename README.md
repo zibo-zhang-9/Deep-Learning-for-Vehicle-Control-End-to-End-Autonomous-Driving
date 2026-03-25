@@ -113,14 +113,13 @@ To improve model performance, systematic experiments were conducted:
 
 ## Overfitting Mitigation
 
-Overfitting was detected via:
-
-- divergence between training and validation loss  
+Overfitting was detected via divergence between training and validation loss
 
 Solutions:
 
-- early stopping  
-- validation monitoring  
+- early stopping
+- validation monitoring
+- learning rate adjustment
 
 ---
 
