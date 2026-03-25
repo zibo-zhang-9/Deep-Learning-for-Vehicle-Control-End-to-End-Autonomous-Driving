@@ -7,7 +7,7 @@
 
 This project presents the design and optimization of an **end-to-end learning-based vehicle control system**, where a neural network directly maps **vehicle states and reference trajectories to control commands**.
 
-The goal is to learn a control policy that enables **stable trajectory tracking** in a simulated autonomous driving environment.
+The objective is to learn a control policy that enables **stable trajectory tracking** in a simulated autonomous driving environment.
 
 This work was conducted at between the **Institute for Intelligent Systems and Robotics (ISIR), Sorbonne University** and **Mines Paris, PSL University**.
 
@@ -27,14 +27,14 @@ This work was conducted at between the **Institute for Intelligent Systems and R
 
 Traditional vehicle control relies on model-based approaches such as PID or MPC.
 
-In contrast, this project explores a data-driven alternative, where a neural network learns the control policy directly from data.
+In contrast, this project explores a data-driven alternative, where a neural network learns the control strategy directly from data.
 
 The problem is formulated as a supervised learning task, where:
 
 - Input: vehicle states (position, velocity, orientation) + reference trajectory
 - Output: control commands (steering angle, acceleration command)
 
-The objective is to approximate a mapping: (state, trajectory) → control enabling **accurate and stable trajectory tracking**.
+The objective is to approximate a mapping: (state, trajectory) → control, which enables **accurate and stable trajectory tracking**.
 
 ---
 
