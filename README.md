@@ -42,13 +42,13 @@ The objective is to approximate a mapping: (state, trajectory) → control, whic
 
 The overall workflow of the system can be summarized as:
 
-Dataset → Preprocessing → Neural Network → Training → Evaluation → Simulation
+Dataset → Preprocessing → Neural Network Model→ Training → Evaluation → Simulation
 
 ---
 
 # Model Design
 
-A **Multi-Layer Perceptron (MLP)** is used as the core model.
+A **Multi-Layer Perceptron (MLP)** is used as the core Neural Network model.
 
 The model is trained to minimize the difference between predicted and target control commands using Mean Squared Error (MSE) as the loss function.
 
