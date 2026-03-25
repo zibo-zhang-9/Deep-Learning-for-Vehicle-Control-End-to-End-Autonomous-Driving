@@ -96,8 +96,40 @@ To improve model performance, systematic experiments were conducted:
 - Grid Search for optimal architecture  
 - Final selected structure: `64-128-64-128-128`
 
+Experimental Methodology
 
-Example optimized architecture:
+To improve model performance, a systematic experimental strategy was designed:
+
+### Learning Rate Stabilization
+Compared different learning rates:
+fixed (1e-3, 1e-4)
+dynamic scheduling (ReduceLROnPlateau)
+Objective: balance convergence speed and stability
+### Network Depth Exploration
+Depth range: 1–10 layers
+Fixed neuron size during experiment
+Observations:
+deeper networks → faster convergence
+too deep → instability
+
+→ Selected optimal depth: 5 layers
+
+### Network Width Exploration
+Width range: 32–256 neurons
+Trade-off:
+small model → underfitting
+large model → unstable & overfitting
+
+→ Selected base width: 64 neurons
+
+### Architecture Optimization (Grid Search)
+
+To avoid exhaustive search cost, a two-stage grid search was applied:
+
+Stage 1: optimize first layers
+Stage 2: optimize remaining layers
+
+Example of final optimized 5-layer architecture:
 
 64 → 128 → 64 → 128 → 128 → output
 
