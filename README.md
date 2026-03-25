@@ -67,16 +67,8 @@ Simulation Environment
 
 A **Multi-Layer Perceptron (MLP)** is used as the core model.
 
-Key characteristics:
-
-- Input: vehicle state + trajectory features  
-- Output: continuous control commands  
-- Fully connected architecture  
-
-Example optimized architecture:
-
-64 → 128 → 64 → 128 → 128 → output
-
+The model is implemented as a fully connected neural network (MLP) with ReLU activations to capture nonlinear relationships between inputs and outputs.  
+It produces continuous-valued control commands, making it suitable for regression-based control tasks.
 
 ---
 
@@ -108,6 +100,13 @@ To improve model performance, systematic experiments were conducted:
 
 - Grid Search for optimal architecture  
 - Final selected structure: `64-128-64-128-128`
+
+
+Example optimized architecture:
+
+64 → 128 → 64 → 128 → 128 → output
+
+
 
 ---
 
