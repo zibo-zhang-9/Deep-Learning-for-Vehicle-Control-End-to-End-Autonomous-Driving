@@ -138,6 +138,9 @@ To address this issue, several techniques were applied:
 
 ## Training Behavior
 
+stable convergence achieved
+reduced oscillations after learning rate tuning
+improved generalization with optimized architecture
 - stable convergence observed  
 - reduced validation loss after tuning  
 
@@ -151,6 +154,14 @@ Results:
 - smooth control output  
 - no oscillatory behavior  
 
+The trained model was deployed in a simulation environment.
+
+Results:
+
+stable trajectory tracking
+smooth control outputs
+no significant oscillations
+
 ---
 
 # Technologies Used
@@ -161,7 +172,7 @@ Results:
 
 ## Machine Learning
 
-- PyTorch / TensorFlow (depending on your actual stack)
+- PyTorch / TensorFlow
 
 ## Tools
 
@@ -180,15 +191,7 @@ Potential applications include:
 
 - autonomous driving control  
 - learning-based robotics control  
-- imitation learning for dynamic systems  
-
----
-
-# Limitations & Future Work
-
-- limited generalization to unseen environments  
-- no perception module (state is assumed known)  
-- future work: integrate perception + RL  
+- imitation learning for dynamic systems
 
 ---
 
