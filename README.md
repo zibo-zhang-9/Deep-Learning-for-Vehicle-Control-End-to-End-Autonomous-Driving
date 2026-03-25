@@ -77,35 +77,20 @@ Simulation Environment
 
 ---
 
-## Optimization Strategy
-
-To improve model performance, systematic experiments were conducted:
-
-### Network Structure Exploration
-
-- Depth: 1–10 layers  
-- Width: 32–256 neurons  
-
-### Learning Rate Tuning
-
-- Fixed learning rate  
-- Dynamic scheduling (ReduceLROnPlateau)
-
-### Model Selection
-
-- Grid Search for optimal architecture  
-- Final selected structure: `64-128-64-128-128`
-
-Experimental Methodology
+## Experimental Methodology
 
 To improve model performance, a systematic experimental strategy was designed:
 
 ### Learning Rate Stabilization
+- Fixed learning rate  
+- Dynamic scheduling (ReduceLROnPlateau)
 Compared different learning rates:
 fixed (1e-3, 1e-4)
 dynamic scheduling (ReduceLROnPlateau)
 Objective: balance convergence speed and stability
 ### Network Depth Exploration
+- Depth: 1–10 layers  
+- Width: 32–256 neurons  
 Depth range: 1–10 layers
 Fixed neuron size during experiment
 Observations:
@@ -125,6 +110,7 @@ large model → unstable & overfitting
 ### Architecture Optimization (Grid Search)
 
 To avoid exhaustive search cost, a two-stage grid search was applied:
+- Grid Search for optimal architecture  
 
 Stage 1: optimize first layers
 Stage 2: optimize remaining layers
