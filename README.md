@@ -40,32 +40,25 @@ The objective is to approximate a mapping: (state, trajectory) → control, whic
 
 # System Architecture
 
-The pipeline consists of the following stages:
+The overall workflow of the system can be summarized as:
 
 Dataset → Preprocessing → Neural Network → Training → Evaluation → Simulation
-
-Illustration:
-
-Vehicle State + Reference Trajectory
-
-↓
-
-Neural Network (MLP)
-
-↓
-
-Control Commands (steering, acceleration)
-
-↓
-
-Simulation Environment
-
 
 ---
 
 # Model Design
 
 A **Multi-Layer Perceptron (MLP)** is used as the core model.
+
+At the core of the system, the model learns a direct mapping:
+
+Vehicle State + Reference Trajectory
+↓
+Neural Network (MLP)
+↓
+Control Commands (steering, acceleration)
+↓
+Simulation Environment
 
 The model is implemented as a fully connected neural network (MLP) with ReLU activations to capture nonlinear relationships between inputs and outputs.  
 It produces continuous-valued control commands, making it suitable for regression-based control tasks.
