@@ -27,19 +27,14 @@ This work was conducted at between the **Institute for Intelligent Systems and R
 
 Traditional vehicle control relies on model-based approaches such as PID or MPC.
 
-In contrast, this project explores a **data-driven alternative**, where a neural network learns the control policy directly from data.
+In contrast, this project explores a data-driven alternative, where a neural network learns the control policy directly from data.
 
-The system takes as input:
+The problem is formulated as a supervised learning task, where:
 
-- vehicle states (position, velocity, orientation)
-- reference trajectory
+- Input: vehicle states (position, velocity, orientation) + reference trajectory
+- Output: control commands (steering angle, acceleration command)
 
-and outputs:
-
-- steering angle
-- acceleration command
-
-The objective is to enable **accurate and stable trajectory tracking** using learned policies.
+The objective is to approximate a mapping: (state, trajectory) → control enabling **accurate and stable trajectory tracking**.
 
 ---
 
