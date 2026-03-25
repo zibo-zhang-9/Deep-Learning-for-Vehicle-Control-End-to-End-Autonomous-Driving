@@ -46,3 +46,144 @@ The objective is to enable **accurate and stable trajectory tracking** using lea
 # System Architecture
 
 The pipeline consists of the following stages:
+
+Dataset → Preprocessing → Neural Network → Training → Evaluation → Simulation
+
+Illustration:
+
+Vehicle State + Reference Trajectory
+↓
+Neural Network (MLP)
+↓
+Control Commands (steering, acceleration)
+↓
+Simulation Environment
+
+
+---
+
+# Model Design
+
+A **Multi-Layer Perceptron (MLP)** is used as the core model.
+
+Key characteristics:
+
+- Input: vehicle state + trajectory features  
+- Output: continuous control commands  
+- Fully connected architecture  
+
+Example optimized architecture:
+
+64 → 128 → 64 → 128 → 128 → output
+
+
+---
+
+# Training Pipeline
+
+## Dataset Processing
+
+- Data split: train / validation / test  
+- Feature normalization  
+- Input-output pairing (state → control)
+
+---
+
+## Optimization Strategy
+
+To improve model performance, systematic experiments were conducted:
+
+### Network Structure Exploration
+
+- Depth: 1–10 layers  
+- Width: 32–256 neurons  
+
+### Learning Rate Tuning
+
+- Fixed learning rate  
+- Dynamic scheduling (ReduceLROnPlateau)
+
+### Model Selection
+
+- Grid Search for optimal architecture  
+- Final selected structure: `64-128-64-128-128`
+
+---
+
+## Overfitting Mitigation
+
+Overfitting was detected via:
+
+- divergence between training and validation loss  
+
+Solutions:
+
+- early stopping  
+- validation monitoring  
+
+---
+
+# Experimental Results
+
+## Training Behavior
+
+- stable convergence observed  
+- reduced validation loss after tuning  
+
+## Simulation Performance
+
+The trained model was deployed in a simulation environment.
+
+Results:
+
+- stable trajectory tracking  
+- smooth control output  
+- no oscillatory behavior  
+
+---
+
+# Technologies Used
+
+## Programming
+
+- Python  
+
+## Machine Learning
+
+- PyTorch / TensorFlow (depending on your actual stack)
+
+## Tools
+
+- NumPy  
+- Matplotlib  
+
+## Simulation
+
+- custom simulation / provided framework  
+
+---
+
+# Applications
+
+Potential applications include:
+
+- autonomous driving control  
+- learning-based robotics control  
+- imitation learning for dynamic systems  
+
+---
+
+# Limitations & Future Work
+
+- limited generalization to unseen environments  
+- no perception module (state is assumed known)  
+- future work: integrate perception + RL  
+
+---
+
+# Author
+
+Zibo Zhang  
+PhD in Robotics  
+IMT Atlantique / Université Grenoble Alpes
+
