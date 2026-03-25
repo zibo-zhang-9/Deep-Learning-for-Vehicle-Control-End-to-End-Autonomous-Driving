@@ -47,11 +47,17 @@ Dataset → Preprocessing → Neural Network → Training → Evaluation → Sim
 Illustration:
 
 Vehicle State + Reference Trajectory
+
 ↓
+
 Neural Network (MLP)
+
 ↓
+
 Control Commands (steering, acceleration)
+
 ↓
+
 Simulation Environment
 
 
