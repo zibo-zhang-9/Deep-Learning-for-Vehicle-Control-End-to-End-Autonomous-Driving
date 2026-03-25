@@ -50,6 +50,11 @@ Dataset → Preprocessing → Neural Network → Training → Evaluation → Sim
 
 A **Multi-Layer Perceptron (MLP)** is used as the core model.
 
+The model is trained to minimize the difference between predicted and target control commands using Mean Squared Error (MSE) as the loss function.
+
+The model is implemented as a fully connected neural network (MLP) with ReLU activations to capture nonlinear relationships between inputs and outputs.  
+It produces continuous-valued control commands, making it suitable for regression-based control tasks.
+
 At the core of the system, the model learns a direct mapping:
 
 Vehicle State + Reference Trajectory
@@ -59,9 +64,6 @@ Neural Network (MLP)
 Control Commands (steering, acceleration)
 ↓
 Simulation Environment
-
-The model is implemented as a fully connected neural network (MLP) with ReLU activations to capture nonlinear relationships between inputs and outputs.  
-It produces continuous-valued control commands, making it suitable for regression-based control tasks.
 
 ---
 
