@@ -27,12 +27,12 @@ This work was conducted at between the **Institute for Intelligent Systems and R
 
 Traditional vehicle control relies on model-based approaches such as Proportional–Integral–Derivative (PID) control or Model Predictive Control (MPC).
 
-In contrast, this project explores a data-driven alternative, where a neural network learns the control strategy directly from data.
+In contrast, this project explores a data-driven alternative, where a neural network learns the control strategy directly from data. Compared to classical control methods such as PID or MPC, learning-based approaches do not require explicit system modeling, can capture complex nonlinear dynamics, and are capable of adapting to data-driven behaviors [A]. 
 
-The problem is formulated as a supervised learning task, where:
+Learning vehicle control from data is inherently challenging, as the system must remain stable over time, errors tend to accumulate sequentially, and the underlying dynamics are highly nonlinear and strongly coupled. The problem is formulated as a supervised learning task, where:
 
-- Input: vehicle states (position, velocity, orientation) and reference trajectory
-- Output: control commands (steering angle and acceleration command)
+- Input: **vehicle states (position, velocity, orientation)** and **reference trajectory**
+- Output: **control commands (steering angle and acceleration command)**
 
 The objective is to approximate a mapping: (state, trajectory) → control, which enables **accurate and stable trajectory tracking**.
 
@@ -218,6 +218,19 @@ Potential applications include:
 - autonomous driving control  
 - learning-based robotics control  
 - imitation learning for dynamic systems
+
+---
+
+# References
+
+[A] Guillaume Devineau. Deep learning for multivariate time series : from vehicle control to gesture recognition and generation. Machine Learning [cs.LG]. Université Paris sciences et lettres, 2020.
+
+
+# Appendix: Implementation Details
+
+## Grid Search Visualization
+![grid1](media/grid1.png)
+![grid2](media/grid2.png)
 
 ---
 
