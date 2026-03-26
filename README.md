@@ -117,10 +117,6 @@ To reduce search complexity, a two-stage grid search was applied:
 - Stage 1: optimize early layers  
 - Stage 2: refine deeper layers  
 
-→ Final selected architecture:
-
-64 → 128 → 64 → 128 → 128 → output
-
 ## Overfitting Mitigation
 
 Overfitting was identified when validation loss increased while training loss decreased.
@@ -142,6 +138,9 @@ Training Curves:
 
 ![loss](media/loss.png)
 
+This figure shows the evolution of training and validation loss during optimization.
+We observe stable convergence and improved generalization after tuning the learning rate.
+
 ## Model Comparison
 
 Different architectures were evaluated to study the effect of depth and width.
@@ -150,6 +149,11 @@ Depth Comparison:
 
 ![layers](media/layers.png)
 
+This figure compares models with different depths.
+It highlights the trade-off between model capacity and training stability:
+deeper networks converge faster but may become unstable.
+
+
 ## Final Model Performance
 
 The optimized architecture achieved the best trade-off between stability and accuracy.
@@ -157,6 +161,14 @@ The optimized architecture achieved the best trade-off between stability and acc
 Final Loss:
 
 ![final_loss](media/final_loss.png)
+
+The final model achieves the lowest validation loss, indicating improved generalization performance.
+
+→ Final selected architecture:
+
+64 → 128 → 64 → 128 → 128 → output
+
+→ Indicates that moderate depth (5 layers) provides the best stability-performance trade-off
 
 ## Simulation Results
 
