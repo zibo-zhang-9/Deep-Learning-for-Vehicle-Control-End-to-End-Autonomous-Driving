@@ -159,8 +159,6 @@ Final Loss:
 
 ![final_loss](media/final_loss.png)
 
-![final_loss](media/final_model_loss.png)
-
 ## Simulation Results
 
 The trained model was deployed in a simulation environment.
