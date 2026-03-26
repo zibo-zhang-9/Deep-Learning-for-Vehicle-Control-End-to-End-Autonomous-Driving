@@ -182,6 +182,18 @@ The generated control commands are smooth and consistent, without noticeable osc
 
 ---
 
+# Conclusion
+
+This project demonstrates how neural networks can be used to learn vehicle control policies in an end-to-end manner.
+
+Through systematic experimentation, we analyzed the impact of model architecture, learning rate strategies, and regularization techniques on training stability and generalization performance.
+
+The results show that a properly tuned MLP can achieve stable trajectory tracking in simulation, highlighting the potential of learning-based approaches for control tasks.
+
+Although simplified compared to full-scale autonomous driving systems, this project provides practical insights into the challenges of training neural network controllers, including overfitting, instability, and model selection.
+
+---
+
 # Technologies Used
 
 ## Programming
