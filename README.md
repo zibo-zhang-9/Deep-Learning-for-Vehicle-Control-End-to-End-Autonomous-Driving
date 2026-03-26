@@ -140,6 +140,7 @@ To address this issue, several techniques were applied:
 The training process shows stable convergence and reduced oscillations after tuning.
 
 Training Curves :
+
 ![loss](media/loss.png)
 
 ## Model Comparison
