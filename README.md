@@ -209,10 +209,6 @@ Although simplified compared to full-scale autonomous driving systems, this proj
 - NumPy  
 - Matplotlib  
 
-## Simulation
-
-- custom simulation / provided framework  
-
 ---
 
 # Applications
