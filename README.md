@@ -174,8 +174,9 @@ Example of trajectory tracking is shown below:
 
 ![simulation](media/simulation.png)
 
-The trained model demonstrates stable trajectory tracking in the simulation environment.
-The generated control commands are smooth and consistent, without noticeable oscillatory behavior.
+The predicted trajectory closely follows the reference path with limited lateral deviation. The generated control commands are smooth and consistent, without noticeable oscillatory behavior. In particular, the vehicle maintains stable behavior in curved segments.
+
+This indicates that the model successfully learned the underlying control strategy, and is able to capture the coupling between steering and acceleration dynamics.
 
 ---
 
