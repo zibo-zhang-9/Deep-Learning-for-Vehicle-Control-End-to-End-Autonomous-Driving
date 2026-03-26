@@ -85,46 +85,44 @@ To improve model performance, a systematic experimental methodology was designed
 
 ### Learning Rate Stabilization
 
-We want to balance convergence speed and stability, so we
+To balance convergence speed and stability:
 
-- Compared different learning rates: fixed (1e-3, 1e-4)  
-- Dynamic scheduling (ReduceLROnPlateau)
+- Fixed learning rates: 1e-3, 1e-4  
+- Adaptive scheduling: ReduceLROnPlateau  
 
 ### Network Depth Exploration
 
-We test different Depth range: 1–10 layers and different Width form 32–256 neurons
-- Depth: 1–10 layers  
-- Width: 32–256 neurons  
-Depth range: 1–10 layers
-Fixed neuron size during experiment
-Observations:
-deeper networks → faster convergence too deep → instability
+- Depth range: 1–10 layers  
+- Fixed width during experiments
+
+**Observation:**
+
+- Deeper networks → faster convergence  
+- Too deep → instability and degraded performance  
 
 ### Network Width Exploration
-Width range: 32–256 neurons
-Trade-off:
-small model → underfitting
-large model → unstable & overfitting
 
-→ Selected base width: 64 neurons
+- Width range: 32–256 neurons
+
+**Observation:**
+
+- Small models → underfitting  
+- Large models → overfitting and unstable training
 
 ### Architecture Optimization (Grid Search)
 
-To avoid exhaustive search cost, a two-stage grid search was applied:
-- Grid Search for optimal architecture  
+To reduce search complexity, a two-stage grid search was applied:
 
-Stage 1: optimize first layers
-Stage 2: optimize remaining layers
+- Stage 1: optimize early layers  
+- Stage 2: refine deeper layers  
 
-→ Selected optimal depth: 5 layers
-
-Example of final optimized 5-layer architecture:
+→ Final selected architecture:
 
 64 → 128 → 64 → 128 → 128 → output
 
 ## Overfitting Mitigation
 
-Overfitting was observed when the training loss continued to decrease while the validation loss started to increase.
+Overfitting was identified when validation loss increased while training loss decreased.
 
 To address this issue, several techniques were applied:
 - early stopping to prevent excessive training
