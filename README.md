@@ -242,7 +242,7 @@ Observations:
 
 - certain layer combinations consistently lead to lower loss (highlighted in darker colors)
 - overly large or unbalanced architectures tend to produce higher loss
-- a structured architecture (e.g., 64-128-64-128-128) achieves a good trade-off between stability and performance
+- a structured architecture (e.g., 64-128-64-128-128) achieves a good trade-off between stability and accuracy.
 
 These visualizations provide insight into how architecture design impacts model performance and guided the selection of the final model.
 
