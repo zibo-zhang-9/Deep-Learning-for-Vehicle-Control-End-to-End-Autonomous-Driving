@@ -137,13 +137,31 @@ To address this issue, several techniques were applied:
 
 ## Training Behavior
 
-stable convergence achieved
-reduced oscillations after learning rate tuning
-improved generalization with optimized architecture
-- stable convergence observed  
-- reduced validation loss after tuning  
+The training process shows stable convergence and reduced oscillations after tuning.
 
-## Simulation Performance
+Training Curves :
+![loss](media/loss.png)
+
+## Model Comparison
+
+Different architectures were evaluated to study the effect of depth and width.
+
+### Depth Comparison
+![layers](media/layers.png)
+
+## Final Model Performance
+
+The optimized architecture achieved the best trade-off between stability and accuracy.
+
+### Final Loss
+![final_loss](media/final_loss.png)
+
+## Simulation Results
+
+The trained model was deployed in a simulation environment.
+
+Trajectory Tracking:
+![simulation](media/simulation.png)
 
 The trained model was deployed in a simulation environment.
 
@@ -151,15 +169,7 @@ Results:
 
 - stable trajectory tracking  
 - smooth control output  
-- no oscillatory behavior  
-
-The trained model was deployed in a simulation environment.
-
-Results:
-
-stable trajectory tracking
-smooth control outputs
-no significant oscillations
+- no oscillatory behavior
 
 ---
 
