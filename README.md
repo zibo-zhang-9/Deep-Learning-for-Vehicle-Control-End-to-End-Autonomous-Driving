@@ -160,7 +160,7 @@ As shown in the figure below, larger models (e.g., 256 neurons) can achieve lowe
 
 ![final_loss](media/final_loss.png)
 
-The selected architecture is a five-layer MLP with the following structure: 64 → 128 → 64 → 128 → 128.
+The selected architecture is a five-layer MLP with the following structure: **64 → 128 → 64 → 128 → 128**.
 
 This architecture achieves low validation loss while maintaining stable training convergence.
 
