@@ -68,7 +68,7 @@ Simulation Environment
 ```
 ---
 
-# Training Pipeline
+# Training Workflow
 
 ## Dataset Processing
 
@@ -76,29 +76,26 @@ Simulation Environment
 - Feature normalization  
 - Input-output pairing (state → control)
 
----
-
 ## Experimental Methodology
 
-To improve model performance, a systematic experimental strategy was designed:
+To improve model performance, a systematic experimental methodology was designed:
 
 ### Learning Rate Stabilization
-- Fixed learning rate  
+
+We want to balance convergence speed and stability, so we
+
+- Compared different learning rates: fixed (1e-3, 1e-4)  
 - Dynamic scheduling (ReduceLROnPlateau)
-Compared different learning rates:
-fixed (1e-3, 1e-4)
-dynamic scheduling (ReduceLROnPlateau)
-Objective: balance convergence speed and stability
+
 ### Network Depth Exploration
+
+We test different Depth range: 1–10 layers and different Width form 32–256 neurons
 - Depth: 1–10 layers  
 - Width: 32–256 neurons  
 Depth range: 1–10 layers
 Fixed neuron size during experiment
 Observations:
-deeper networks → faster convergence
-too deep → instability
-
-→ Selected optimal depth: 5 layers
+deeper networks → faster convergence too deep → instability
 
 ### Network Width Exploration
 Width range: 32–256 neurons
@@ -116,13 +113,11 @@ To avoid exhaustive search cost, a two-stage grid search was applied:
 Stage 1: optimize first layers
 Stage 2: optimize remaining layers
 
+→ Selected optimal depth: 5 layers
+
 Example of final optimized 5-layer architecture:
 
 64 → 128 → 64 → 128 → 128 → output
-
-
-
----
 
 ## Overfitting Mitigation
 
