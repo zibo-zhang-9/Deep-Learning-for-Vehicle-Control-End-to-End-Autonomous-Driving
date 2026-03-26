@@ -223,7 +223,7 @@ Potential applications include:
 
 # References
 
-[A] Guillaume Devineau. Deep learning for multivariate time series : from vehicle control to gesture recognition and generation. Machine Learning [cs.LG]. Université Paris sciences et lettres, 2020.
+[A] Guillaume Devineau. Deep learning for multivariate time series : from vehicle control to gesture recognition and generation. Machine Learning. Université Paris sciences et lettres, 2020.
 
 
 # Appendix: Implementation Details
