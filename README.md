@@ -25,7 +25,7 @@ This work was conducted at between the **Institute for Intelligent Systems and R
 
 # Overview
 
-Traditional vehicle control relies on model-based approaches such as PID or MPC.
+Traditional vehicle control relies on model-based approaches such as Proportional–Integral–Derivative (PID) control or Model Predictive Control (MPC).
 
 In contrast, this project explores a data-driven alternative, where a neural network learns the control strategy directly from data.
 
@@ -38,7 +38,7 @@ The objective is to approximate a mapping: (state, trajectory) → control, whic
 
 ---
 
-# System Architecture
+# Processing Pipeline
 
 The overall workflow of the system can be summarized as:
 
@@ -68,7 +68,7 @@ Simulation Environment
 ```
 ---
 
-# Training Workflow
+# Training Workflow of the model
 
 ## Dataset Processing
 
@@ -82,7 +82,7 @@ Example trajectories from the training dataset are shown below:
 
 ## Experimental Methodology
 
-To improve model performance, a systematic experimental methodology was designed:
+To improve model performance, a systematic experimental methodology was designed. It involves controlled variable analysis and structured hyperparameter exploration.
 
 ### Learning Rate Stabilization
 
@@ -145,24 +145,30 @@ We observe stable convergence and improved generalization after tuning the learn
 
 Different architectures were evaluated to study the effect of depth and width.
 
-Depth Comparison:
+The following figure compares models using different depths (layer numbers = 1,3,5,10) while keeping neuron width fixed.
 
 ![layers](media/layers.png)
 
-This figure compares models with different depths.
 It highlights the trade-off between model capacity and training stability:
 deeper networks converge faster but may become unstable.
-
 
 ## Final Model Performance
 
 The optimized architecture achieved the best trade-off between stability and accuracy.
 
-Final Loss:
+Although larger models achieve lower loss, they also show increased variance and reduced stability, as shown in the following figure regarding the final Loss:
 
 ![final_loss](media/final_loss.png)
 
 The final model achieves the lowest validation loss, indicating improved generalization performance.
+
+The model with 256 neurons achieves the lowest loss, but also shows increased variance, indicating reduced stability.
+
+The model with 128 neurons provides a better trade-off between accuracy and robustness.
+
+The final architecture (64-128-64-128-128) was selected based on both performance and stability considerations.
+
+Therefore, a moderately sized network was selected.
 
 The selected architecture is a five-layer MLP with the following structure:
 64 → 128 → 64 → 128 → 128 → output.
