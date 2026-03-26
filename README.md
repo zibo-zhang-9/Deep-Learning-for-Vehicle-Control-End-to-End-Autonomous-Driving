@@ -76,6 +76,9 @@ Simulation Environment
 - Feature normalization  
 - Input-output pairing (state → control)
 
+Training Data Visualization :
+![trajectories](media/trajectories.png)
+
 ## Experimental Methodology
 
 To improve model performance, a systematic experimental methodology was designed:
