@@ -72,9 +72,9 @@ Simulation Environment
 
 ## Dataset Processing
 
-- Data split: train / validation / test  
-- Feature normalization  
-- Input-output pairing (state → control)
+The dataset is split into training, validation, and test sets to ensure proper evaluation.
+All input features are normalized to improve training stability and convergence.
+Each sample is constructed as an input-output pair, where vehicle states and reference trajectories are mapped to control commands.
 
 Example trajectories from the dataset used for training:
 
