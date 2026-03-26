@@ -96,7 +96,7 @@ To balance convergence speed and stability:
 - Depth range: 1–10 layers  
 - Fixed width during experiments
 
-**Observation:**
+Observation:
 
 - Deeper networks → faster convergence  
 - Too deep → instability and degraded performance  
@@ -105,7 +105,7 @@ To balance convergence speed and stability:
 
 - Width range: 32–256 neurons
 
-**Observation:**
+Observation:
 
 - Small models → underfitting  
 - Large models → overfitting and unstable training
