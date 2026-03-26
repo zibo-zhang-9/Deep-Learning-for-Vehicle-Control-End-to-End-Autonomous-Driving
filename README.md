@@ -76,7 +76,8 @@ Simulation Environment
 - Feature normalization  
 - Input-output pairing (state → control)
 
-Training Data Visualization :
+Example trajectories from the dataset used for training:
+
 ![trajectories](media/trajectories.png)
 
 ## Experimental Methodology
