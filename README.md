@@ -229,8 +229,22 @@ Potential applications include:
 # Appendix: Implementation Details
 
 ## Grid Search Visualization
-![grid1](media/grid1.png)
-![grid2](media/grid2.png)
+
+The following figures illustrate the results of the grid search over different network architectures.
+
+![grid1](media/grid.png)
+
+Each polyline represents one model configuration, where:
+- each vertical axis corresponds to a layer size (number of neurons)
+- the final axis represents the resulting loss
+
+Observations:
+
+- certain layer combinations consistently lead to lower loss (highlighted in darker colors)
+- overly large or unbalanced architectures tend to produce higher loss
+- a structured architecture (e.g., 64-128-64-128-128) achieves a good trade-off between stability and performance
+
+These visualizations provide insight into how architecture design impacts model performance and guided the selection of the final model.
 
 ---
 
