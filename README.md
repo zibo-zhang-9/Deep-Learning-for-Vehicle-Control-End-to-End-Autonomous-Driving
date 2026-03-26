@@ -234,8 +234,8 @@ The following figures illustrate the results of a **two-stage grid search** for 
 
 ![grid1](media/grid.png)
 
-- **Left figure**: exploration of the first three layers (layer1–layer2-layer3)  
-- **Right figure**: exploration of the remaining layers (layer4–layer5), based on the best architectures from stage 1  
+- **Left figure (stage 1)**: exploration of the first three layers (layer1–layer2-layer3)  
+- **Right figure (stage 2)**: exploration of the remaining layers (layer4–layer5), based on the best architectures from stage 1  
 
 Each polyline represents one model architecture, where:
 - each vertical axis corresponds to the number of neurons in a layer  
