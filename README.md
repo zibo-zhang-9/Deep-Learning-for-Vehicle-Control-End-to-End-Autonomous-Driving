@@ -230,12 +230,15 @@ Potential applications include:
 
 ## Grid Search Visualization
 
-The following figures illustrate the results of the grid search over different network architectures.
+The following figures illustrate the results of a **two-stage grid search** for optimizing the network architecture.
 
 ![grid1](media/grid.png)
 
-Each polyline represents one model configuration, where:
-- each vertical axis corresponds to a layer size (number of neurons)
+- **Left figure**: exploration of the first three layers (layer1–layer2-layer3)  
+- **Right figure**: exploration of the remaining layers (layer4–layer5), based on the best architectures from stage 1  
+
+Each polyline represents one model architecture, where:
+- each vertical axis corresponds to the number of neurons in a layer  
 - the final axis represents the resulting loss
 
 Observations:
@@ -244,7 +247,7 @@ Observations:
 - overly large or unbalanced architectures tend to produce higher loss
 - a structured architecture (e.g., 64-128-64-128-128) achieves a good trade-off between stability and accuracy.
 
-These visualizations provide insight into how architecture design impacts model performance and guided the selection of the final model.
+This two-stage grid search strategy significantly reduces the search space while preserving performance.
 
 ---
 
