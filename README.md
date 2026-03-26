@@ -154,26 +154,17 @@ deeper networks converge faster but may become unstable.
 
 ## Final Model Performance
 
-The optimized architecture achieved the best trade-off between stability and accuracy.
+The optimized architecture achieves a strong balance between accuracy and training stability.
 
-Although larger models achieve lower loss, they also show increased variance and reduced stability, as shown in the following figure regarding the final Loss:
+As shown in the figure below, larger models (e.g., 256 neurons) can achieve lower loss but exhibit higher variance and reduced stability. In contrast, smaller models are more stable but tend to underfit.
 
 ![final_loss](media/final_loss.png)
 
-The final model achieves the lowest validation loss, indicating improved generalization performance.
+The selected architecture is a five-layer MLP with the following structure: 64 → 128 → 64 → 128 → 128.
 
-The model with 256 neurons achieves the lowest loss, but also shows increased variance, indicating reduced stability.
+This architecture achieves low validation loss while maintaining stable training convergence.
 
-The model with 128 neurons provides a better trade-off between accuracy and robustness.
-
-The final architecture (64-128-64-128-128) was selected based on both performance and stability considerations.
-
-Therefore, a moderately sized network was selected.
-
-The selected architecture is a five-layer MLP with the following structure:
-64 → 128 → 64 → 128 → 128 → output.
-
-This result suggests that a moderately deep network provides the best trade-off between model capacity and training stability.
+This result indicates that a moderately deep and well-structured network is sufficient to capture the control strategy without introducing instability.
 
 ## Simulation Results
 
