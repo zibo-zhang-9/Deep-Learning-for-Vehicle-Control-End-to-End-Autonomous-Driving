@@ -57,14 +57,15 @@ It produces continuous-valued control commands, making it suitable for regressio
 
 At the core of the system, the model learns a direct mapping:
 
+```
 Vehicle State + Reference Trajectory
-↓
-Neural Network (MLP)
-↓
+   ↓
+Neural Network Model (MLP)
+   ↓
 Control Commands (steering, acceleration)
-↓
+   ↓
 Simulation Environment
-
+```
 ---
 
 # Training Pipeline
