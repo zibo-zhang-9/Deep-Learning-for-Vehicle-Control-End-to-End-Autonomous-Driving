@@ -76,7 +76,7 @@ The dataset is split into training, validation, and test sets to ensure proper e
 All input features are normalized to improve training stability and convergence.
 Each sample is constructed as an input-output pair, where vehicle states and reference trajectories are mapped to control commands.
 
-Example trajectories from the dataset used for training:
+Example trajectories from the training dataset are shown below:
 
 ![trajectories](media/trajectories.png)
 
@@ -164,27 +164,21 @@ Final Loss:
 
 The final model achieves the lowest validation loss, indicating improved generalization performance.
 
-→ Final selected architecture:
+The selected architecture is a five-layer MLP with the following structure:
+64 → 128 → 64 → 128 → 128 → output.
 
-64 → 128 → 64 → 128 → 128 → output
-
-→ Indicates that moderate depth (5 layers) provides the best stability-performance trade-off
+This result suggests that a moderately deep network provides the best trade-off between model capacity and training stability.
 
 ## Simulation Results
 
 The trained model was deployed in a simulation environment.
 
-Trajectory Tracking:
+Example of trajectory tracking is shown below:
 
 ![simulation](media/simulation.png)
 
-The trained model was deployed in a simulation environment.
-
-Results:
-
-- stable trajectory tracking  
-- smooth control output  
-- no oscillatory behavior
+The trained model demonstrates stable trajectory tracking in the simulation environment.
+The generated control commands are smooth and consistent, without noticeable oscillatory behavior.
 
 ---
 
