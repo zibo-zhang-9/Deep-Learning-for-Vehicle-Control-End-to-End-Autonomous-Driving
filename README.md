@@ -31,8 +31,8 @@ In contrast, this project explores a data-driven alternative, where a neural net
 
 The problem is formulated as a supervised learning task, where:
 
-- Input: vehicle states (position, velocity, orientation) + reference trajectory
-- Output: control commands (steering angle, acceleration command)
+- Input: vehicle states (position, velocity, orientation) and reference trajectory
+- Output: control commands (steering angle and acceleration command)
 
 The objective is to approximate a mapping: (state, trajectory) → control, which enables **accurate and stable trajectory tracking**.
 
