@@ -139,7 +139,7 @@ To address this issue, several techniques were applied:
 
 The training process shows stable convergence and reduced oscillations after tuning.
 
-Training Curves :
+Training Curves:
 
 ![loss](media/loss.png)
 
@@ -147,21 +147,26 @@ Training Curves :
 
 Different architectures were evaluated to study the effect of depth and width.
 
-### Depth Comparison
+Depth Comparison:
+
 ![layers](media/layers.png)
 
 ## Final Model Performance
 
 The optimized architecture achieved the best trade-off between stability and accuracy.
 
-### Final Loss
+Final Loss:
+
 ![final_loss](media/final_loss.png)
+
+![final_loss](media/final_model_loss.png)
 
 ## Simulation Results
 
 The trained model was deployed in a simulation environment.
 
 Trajectory Tracking:
+
 ![simulation](media/simulation.png)
 
 The trained model was deployed in a simulation environment.
