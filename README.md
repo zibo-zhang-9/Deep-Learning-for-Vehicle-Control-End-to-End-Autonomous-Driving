@@ -38,7 +38,7 @@ The objective is to approximate a mapping: (state, trajectory) → control, whic
 
 ---
 
-# Processing Pipeline
+# Processing Workflow
 
 The overall workflow of the system can be summarized as:
 
